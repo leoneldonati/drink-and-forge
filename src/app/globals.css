@@ -2,4 +2,53 @@
 
 @theme {
   --color-brand-1: oklch(64.83% 0.213 28.92);
+
+  --font-brand-2: "Neon";
+
+  --animate-neon: neon 3s ease;
+
+  --animate-neon-infinite: neon 3s ease infinite;
+}
+
+/* NEON */
+@font-face {
+  font-family: "Neon";
+  src: url("/fonts/Neon.woff2") format("woff2");
+  font-weight: 400;
+}
+body {
+  background: url("../assets/bg-2.avif");
+  background-color: rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+/* ANIMACION NEON */
+@keyframes neon {
+  0%,
+  19.9%,
+  22%,
+  62.9%,
+  64%,
+  65.9%,
+  70%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00de, 0 0 40px #ff00de,
+      0 0 60px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de;
+  }
+  20%,
+  21%,
+  63%,
+  64.9%,
+  66% {
+    opacity: 0.6;
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #ff00de, 0 0 15px #ff00de;
+  }
+}
+
+button {
+  cursor: pointer;
 }

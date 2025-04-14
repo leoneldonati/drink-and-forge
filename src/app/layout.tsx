@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@components/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Drink & Forge",
+  title: "Drink and Forge",
   description:
-    "Drink & Forge: para quienes saben que la vida sigue y cada trago es un nuevo comienzo. Siempre hay una razón para brindar, aunque sea por olvidar. ¡Salud!",
+    "Drink and Forge: para quienes saben que la vida sigue y cada trago es un nuevo comienzo. Siempre hay una razón para brindar, aunque sea por olvidar. ¡Salud!",
 };
 
 export default function RootLayout({
@@ -26,9 +27,12 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        <main className="max-w-2xl mx-auto">{children}</main>
+        <div className="max-w-4xl mx-auto min-h-screen">
+          <Header />
+          <main className="max-w-2xl mx-auto">{children}</main>
+        </div>
       </body>
     </html>
   );
