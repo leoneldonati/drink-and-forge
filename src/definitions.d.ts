@@ -2,7 +2,7 @@ interface Product {
   _id: string;
   name: string;
   in_stock: boolean;
-  description: string;
-  price: string;
+  price: number;
   created_at: Date;
+  image?: string;
 }

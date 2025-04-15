@@ -3,6 +3,7 @@
 @theme {
   --color-brand-1: oklch(64.83% 0.213 28.92);
 
+  --font-brand-1: "Neon-2";
   --font-brand-2: "Neon";
 
   --animate-neon: neon 3s ease;
@@ -14,6 +15,13 @@
 @font-face {
   font-family: "Neon";
   src: url("/fonts/Neon.woff2") format("woff2");
+  font-weight: 400;
+}
+
+/* NEON 2 */
+@font-face {
+  font-family: "Neon-2";
+  src: url("/fonts/neon-2.woff2") format("woff2");
   font-weight: 400;
 }
 body {

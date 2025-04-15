@@ -4,7 +4,7 @@ import CartButton from "./ui/cart-button";
 export default function Header() {
   return (
     <header className="flex justify-between p-3">
-      <ul className="flex items-center gap-2">
+      <ul className="flex items-center gap-5">
         <li>
           <Link
             href="/"
