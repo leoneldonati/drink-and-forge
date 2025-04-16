@@ -39,8 +39,6 @@ export default function RootLayout({
           position="top-center"
           reverseOrder={false}
           gutter={8}
-          containerClassName=""
-          containerStyle={{}}
           toastOptions={{
             // Define default options
             className: "",

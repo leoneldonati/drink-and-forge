@@ -1,3 +1,4 @@
+import SendOrderButton from "@components/send-order";
 import CartCounter from "@components/ui/cart-counter";
 import CartFeed from "@components/ui/cart-feed";
 import DeleteCartButton from "@components/ui/delete-cart-button";
@@ -13,6 +14,8 @@ export default function Page() {
         <CartCounter />
 
         <DeleteCartButton />
+
+        <SendOrderButton />
       </div>
 
       <CartFeed />

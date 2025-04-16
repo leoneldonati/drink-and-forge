@@ -8,7 +8,7 @@ interface Props {
   product: Product;
 }
 export default function AddCartButton({ product }: Props) {
-  const { addOne } = useCartStore();
+  const { addOne, isInCart } = useCartStore();
 
   const handleAddToCart = () => {
     addOne({ ...product, quantity: 1, selectedFlavors: [] });
@@ -19,7 +19,8 @@ export default function AddCartButton({ product }: Props) {
       onClick={handleAddToCart}
       className="w-full flex items-center justify-center gap-1 px-4 py-2 rounded-md bg-brand-1/70"
     >
-      <IconShoppingCartPlus /> Añadir al carro
+      <IconShoppingCartPlus />{" "}
+      {isInCart(product._id) ? "Agregar uno" : "Añadir al carro"}
     </button>
   );
 }
