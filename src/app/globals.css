@@ -9,6 +9,7 @@
   --animate-neon: neon 3s ease;
   --animate-neon-infinite: neon 3s ease infinite;
   --animate-slide_in: slideIn 1s ease;
+  --animate-from-center: fromCenter 1s ease;
 }
 
 /* NEON */
@@ -90,6 +91,18 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0); /* Posición final */
+  }
+}
+
+@keyframes fromCenter {
+  0% {
+    scale: 0.8;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
   }
 }
 
