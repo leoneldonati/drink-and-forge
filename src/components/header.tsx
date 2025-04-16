@@ -25,6 +25,15 @@ export default function Header() {
         </li>
         <li>
           <Link
+            href="/combos"
+            className="text-lg font-bold font-brand-2 animate-neon hover:animate-neon-infinite"
+            style={{ textShadow: "-1px 1.5px 5px var(--color-brand-1)" }}
+          >
+            Combos
+          </Link>
+        </li>
+        <li>
+          <Link
             href="/about"
             className="text-lg font-bold font-brand-2 animate-neon hover:animate-neon-infinite"
             style={{ textShadow: "-1px 1.5px 5px var(--color-brand-1)" }}

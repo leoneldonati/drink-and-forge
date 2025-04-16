@@ -6,6 +6,7 @@ interface Product {
   created_at: Date;
   image?: string;
   flavors: string[];
+  category: string;
 }
 
 interface ProductInCart extends Product {
