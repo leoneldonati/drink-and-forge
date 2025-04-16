@@ -2,7 +2,7 @@ import Image from "next/image";
 import presentation from "@assets/presentation.png";
 export default function About() {
   return (
-    <section className="flex flex-col gap-5 font-brand-1 text-pretty [&>p]:text-lg [&>p>strong]:text-brand-1 [&>p>strong]:contrast-150 ">
+    <section className="flex flex-col gap-5 font-brand- text-pretty [&>p]:text-lg [&>p>strong]:text-brand-1 [&>p>strong]:contrast-150 ">
       <h2 className="text-4xl font-brand-2 text-center animate-slide_in">
         ¿Quiénes somos?
       </h2>

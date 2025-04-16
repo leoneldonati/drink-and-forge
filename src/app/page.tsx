@@ -1,22 +1,23 @@
 import Image from "next/image";
-import Logo from "@assets/DAF-LOGO-2.svg";
+import Logo from "@assets/main.png";
+import Logo2 from "@assets/main-2.png";
 import Link from "next/link";
 export default function Home() {
   return (
     <section className="grid place-items-center gap-5 pt-20">
       <div className="flex flex-col md:flex-row items-center">
-        <h1
-          style={{ textShadow: "-1px 1.5px 18px var(--color-brand-1)" }}
-          className="text-7xl font-brand-1 italic text-brand-1 contrast-150 animate-slide_in"
-        >
-          Drink & <br /> Forget
-        </h1>
-
         <Image
           src={Logo}
           alt="Logotipo oficial Drink and Forget."
           style={{ filter: "drop-shadow(0 10px 10px var(--color-brand-1))" }}
-          className="animate-neon-infinite max-w-[200px]"
+          className="animate-neon-infinite max-w-[260px] md:hidden"
+        />
+
+        <Image
+          src={Logo2}
+          alt="Logotipo oficial Drink and Forget."
+          style={{ filter: "drop-shadow(0 10px 10px var(--color-brand-1))" }}
+          className="animate-neon-infinite max-w-[660px] md:block hidden"
         />
       </div>
 
