@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <section className="grid place-items-center gap-5 pt-20">
-      <div className="flex flex-row items-center">
+      <div className="flex flex-col md:flex-row items-center">
         <h1
           style={{ textShadow: "-1px 1.5px 18px var(--color-brand-1)" }}
           className="text-7xl font-brand-1 italic text-brand-1 contrast-150 animate-slide_in"
@@ -20,7 +20,7 @@ export default function Home() {
         />
       </div>
 
-      <h2 className="font-brand-2 text-2xl text-white/80">
+      <h2 className="font-brand-2 md:text-2xl text-white/80">
         Cada trago es un nuevo comienzo
       </h2>
 

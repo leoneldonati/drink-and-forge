@@ -10,7 +10,7 @@ export default function Page() {
         Carrito
       </h3>
 
-      <div className="flex justify-center gap-5 items-center">
+      <div className="flex justify-center gap-5 items-center flex-col md:flex-row">
         <CartCounter />
 
         <DeleteCartButton />
