@@ -9,7 +9,7 @@ export default function SendOrderButton() {
   const encodedMessage = createMessage(list);
   return (
     <a
-      href={`https://api.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_PHONE_NUMBER}&text=${encodedMessage}`}
+      href={`https://api.whatsapp.com/send?phone=5493417502479&text=${encodedMessage}`}
       rel="noreferrer noopener"
       aria-label="Enviar el pedido a WhatsApp"
       title="Enviar el pedido a WhatsApp"
