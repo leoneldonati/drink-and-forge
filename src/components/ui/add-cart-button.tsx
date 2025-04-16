@@ -11,7 +11,7 @@ export default function AddCartButton({ product }: Props) {
   const { addOne } = useCartStore();
 
   const handleAddToCart = () => {
-    addOne(product);
+    addOne({ ...product, quantity: 1, selectedFlavors: [] });
     toast.success(`¡${product.name} añadido!`);
   };
   return (

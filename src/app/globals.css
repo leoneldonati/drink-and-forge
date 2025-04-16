@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-1: oklch(64.83% 0.213 28.92);
+  --color-brand-1: oklch(47.29% 0.175 25.84);
 
-  --font-brand-1: "Neon-2";
+  --font-brand-1: "Clarendon";
   --font-brand-2: "Neon";
 
   --animate-neon: neon 3s ease;
-
   --animate-neon-infinite: neon 3s ease infinite;
+  --animate-slide_in: slideIn 1s ease;
 }
 
 /* NEON */
@@ -24,9 +24,23 @@
   src: url("/fonts/neon-2.woff2") format("woff2");
   font-weight: 400;
 }
+
+/* CLARENDON */
+@font-face {
+  font-family: "Clarendon" format("woff2");
+  src: url("/fonts/CLARENDON.woff2");
+  font-weight: 500;
+}
+
+/* BERLIN */
+@font-face {
+  font-family: "Berlin";
+  src: url("/fonts/berlinsignature.woff2") format("woff2");
+  font-weight: 400;
+}
 body {
-  background: url("../assets/bg-2.avif");
-  background-color: rgba(0, 0, 0, 0.7);
+  background: url("../assets/bg.avif");
+  background-color: rgba(0, 0, 0, 1);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -44,8 +58,9 @@ body {
   70%,
   100% {
     opacity: 1;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00de, 0 0 40px #ff00de,
-      0 0 60px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px var(--color-brand-1),
+      0 0 40px var(--color-brand-1), 0 0 60px var(--color-brand-1),
+      0 0 80px var(--color-brand-1), 0 0 100px var(--color-brand-1);
   }
   20%,
   21%,
@@ -53,7 +68,28 @@ body {
   64.9%,
   66% {
     opacity: 0.6;
-    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #ff00de, 0 0 15px #ff00de;
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px var(--color-brand-1),
+      0 0 15px var(--color-brand-1);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(
+      -100vh
+    ); /* Comienza desde arriba, fuera de la pantalla */
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(20px); /* Llega un poco más abajo */
+  }
+  80% {
+    transform: translateY(-10px); /* Rebote hacia arriba */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Posición final */
   }
 }
 

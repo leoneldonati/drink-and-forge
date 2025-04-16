@@ -1,3 +1,21 @@
+import CartCounter from "@components/ui/cart-counter";
+import CartFeed from "@components/ui/cart-feed";
+import DeleteCartButton from "@components/ui/delete-cart-button";
+
 export default function Page() {
-  return <section></section>;
+  return (
+    <section className="flex flex-col gap-5">
+      <h3 className="text-4xl font-brand-2 text-center  animate-neon">
+        Carrito
+      </h3>
+
+      <div className="flex justify-center gap-5 items-center">
+        <CartCounter />
+
+        <DeleteCartButton />
+      </div>
+
+      <CartFeed />
+    </section>
+  );
 }
