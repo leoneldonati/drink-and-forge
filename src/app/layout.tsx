@@ -4,7 +4,8 @@ import "./globals.css";
 import Header from "@components/header";
 import { Toaster } from "react-hot-toast";
 import Footer from "@components/footer";
-
+import Image from "next/image";
+import withoutBg from "@assets/bg-white.png";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -39,6 +40,11 @@ export default function RootLayout({
           <Footer />
         </div>
 
+        <Image
+          src={withoutBg}
+          alt=""
+          className="fixed w-full h-full top-0 left-0 -z-20 object-cover aspect-video scale-110"
+        />
         <Toaster
           position="top-center"
           reverseOrder={false}

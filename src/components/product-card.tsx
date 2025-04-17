@@ -9,10 +9,10 @@ export default function ProductCard({ product }: Props) {
     <article className=" h-full w-full font-brand-2 p-3 rounded-md outline-2 outline-brand-1 shadow-xl shadow-brand-1/40 flex flex-col items-center justify-between backdrop-blur-md bg-black/40">
       <Image
         src={`/products/${product.image}`}
-        alt=""
+        alt="Fondo blanco"
         width={500}
         height={400}
-        className="max-w-40 aspect-square object-contain"
+        className="max-w-40 w-full aspect-square object-contain"
       />
       <p className="h-full">{product.name}</p>
 

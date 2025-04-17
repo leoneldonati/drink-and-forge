@@ -110,14 +110,10 @@ button {
   cursor: pointer;
 }
 
-body {
-  background-image: url("/without-bg.avif");
-  background-color: white;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: white;
-}
-
 li {
   width: 100%;
+}
+
+body {
+  color: #fff;
 }
