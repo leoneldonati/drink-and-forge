@@ -17,7 +17,7 @@ export default function AddCartButton({ product }: Props) {
   return (
     <button
       onClick={handleAddToCart}
-      className="w-full flex items-center justify-center gap-1 px-4 py-2 rounded-md bg-brand-1/70"
+      className="w-full flex items-center justify-center gap-1 px-4 py-2 rounded-md bg-green-600"
     >
       <IconShoppingCartPlus />{" "}
       {isInCart(product._id) ? "Agregar uno" : "Añadir al carro"}

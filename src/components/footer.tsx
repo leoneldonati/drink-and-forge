@@ -11,7 +11,7 @@ export default function Footer() {
       <a
         href={INSTAGRAM_LINK}
         title="¡Visítanos en Instagram!"
-        className="text-white bg-brand-1 p-2 flex rounded-full"
+        className="text-white bg-green-500 p-2 flex rounded-full"
       >
         <IconBrandWhatsapp />
       </a>
