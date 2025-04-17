@@ -43,7 +43,7 @@ export default function RootLayout({
         <Image
           src={withoutBg}
           alt=""
-          className="fixed w-full h-full top-0 left-0 -z-20 object-cover aspect-video scale-110"
+          className="absolute w-full h-full top-0 left-0 -z-20 object-cover aspect-video"
         />
         <Toaster
           position="top-center"
