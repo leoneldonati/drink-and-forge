@@ -5,12 +5,8 @@ import DeleteCartButton from "@components/ui/delete-cart-button";
 
 export default function Page() {
   return (
-    <section className="flex flex-col gap-5">
-      <h3 className="text-4xl font-brand-2 text-center  animate-neon">
-        Carrito
-      </h3>
-
-      <div className="flex justify-center gap-5 items-center flex-col md:flex-row">
+    <section className="flex flex-col gap-5 w-full">
+      <div className="flex  w-full justify-center gap-5 items-center flex-col md:flex-row bg-brand-1 p-4 rounded-md">
         <CartCounter />
 
         <DeleteCartButton />

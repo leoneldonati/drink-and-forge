@@ -10,11 +10,11 @@ export default function CartFeed() {
   const { list, deleteOne, quiteOne } = useCartStore();
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 place-items-center w-full">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 place-items-center w-full py-3">
       {list.map((product) => (
         <article
           key={product._id}
-          className="max-w-[380px] m-h-100 h-full w-full font-brand-2 p-3 rounded-md outline-2 outline-brand-1 shadow-xl shadow-brand-1/40 flex flex-col items-center justify-between backdrop-blur-md relative"
+          className="max-w-[380px] m-h-100 h-full w-full font-brand-2 p-3 rounded-md outline-2 outline-brand-1 shadow-xl shadow-brand-1/40 flex flex-col items-center justify-between backdrop-blur-md bg-black/40 relative"
         >
           <button
             title={`Borrar ${product.name}`}
@@ -23,7 +23,7 @@ export default function CartFeed() {
           >
             <IconTrash />
           </button>
-          <p className="absolute left-2 top-2 z-10 p-1  text-brand-1 text-xl font-bold">
+          <p className="absolute left-2 top-2 z-10 p-1  text-white  text-xl font-bold">
             {product.quantity}
           </p>
 
@@ -45,7 +45,7 @@ export default function CartFeed() {
             onClick={() => quiteOne(product._id)}
             title="Quitar uno de la cantidad"
             aria-label="Quitar uno de la cantidad"
-            className="px-4 py-2 rounded-md flex items-center gap-1 bg-"
+            className="px-4 py-2 rounded-md flex items-center justify-center gap-1 bg-brand-1/70 w-full mt-2"
           >
             <IconShoppingCartMinus /> Quitar uno
           </button>

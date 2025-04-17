@@ -8,7 +8,10 @@ export default function AsideMenu() {
   const [opened, setOpened] = useState(false);
   return (
     <>
-      <button className="md:hidden" onClick={() => setOpened(true)}>
+      <button
+        className="md:hidden bg-brand-1  grid place-items-center px-2 py-1 rounded-md"
+        onClick={() => setOpened(true)}
+      >
         <IconMenu />
       </button>
 
@@ -21,7 +24,10 @@ export default function AsideMenu() {
         onClick={() => setOpened(false)}
       >
         <div className=" md:hidden flex justify-end w-full">
-          <button onClick={() => setOpened(false)}>
+          <button
+            onClick={() => setOpened(false)}
+            className="bg-brand-1  grid place-items-center px-2 py-1 rounded-md"
+          >
             <IconMenu />
           </button>
         </div>
@@ -29,7 +35,7 @@ export default function AsideMenu() {
         <li>
           <Link
             href="/"
-            className="text-lg font-bold font-brand-2 animate-neon hover:animate-neon-infinite"
+            className="px-4 py-2 rounded-md font-brand-2  animate-neon md:w-fit w-full  grid place-items-center bg-brand-1 text-white font-bold"
             style={{ textShadow: "-1px 1.5px 5px var(--color-brand-1)" }}
           >
             Inicio
@@ -38,7 +44,7 @@ export default function AsideMenu() {
         <li>
           <Link
             href="/products"
-            className="text-lg font-bold font-brand-2 animate-neon hover:animate-neon-infinite"
+            className="px-4 py-2 rounded-md font-brand-2  animate-neon md:w-fit w-full  grid place-items-center bg-brand-1 text-white font-bold"
             style={{ textShadow: "-1px 1.5px 5px var(--color-brand-1)" }}
           >
             Productos
@@ -47,19 +53,10 @@ export default function AsideMenu() {
         <li>
           <Link
             href="/combos"
-            className="text-lg font-bold font-brand-2 animate-neon hover:animate-neon-infinite"
+            className="px-4 py-2 rounded-md font-brand-2  animate-neon md:w-fit w-full  grid place-items-center bg-brand-1 text-white font-bold"
             style={{ textShadow: "-1px 1.5px 5px var(--color-brand-1)" }}
           >
             Combos
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/about"
-            className="text-lg font-bold font-brand-2 animate-neon hover:animate-neon-infinite"
-            style={{ textShadow: "-1px 1.5px 5px var(--color-brand-1)" }}
-          >
-            Conócenos
           </Link>
         </li>
       </ul>

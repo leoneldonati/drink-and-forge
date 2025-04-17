@@ -39,16 +39,7 @@
   src: url("/fonts/berlinsignature.woff2") format("woff2");
   font-weight: 400;
 }
-body {
-  background: url("../assets/bg-2.avif");
-  background-color: rgba(0, 0, 0, 1);
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  color: white;
-}
 
-/* ANIMACION NEON */
 @keyframes neon {
   0%,
   19.9%,
@@ -59,9 +50,10 @@ body {
   70%,
   100% {
     opacity: 1;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px var(--color-brand-1),
-      0 0 40px var(--color-brand-1), 0 0 60px var(--color-brand-1),
-      0 0 80px var(--color-brand-1), 0 0 100px var(--color-brand-1);
+    text-shadow: 0 0 5px var(--color-brand-1), 0 0 10px var(--color-brand-1),
+      0 0 20px var(--color-brand-1), 0 0 40px var(--color-brand-1),
+      0 0 60px var(--color-brand-1), 0 0 80px var(--color-brand-1),
+      0 0 100px var(--color-brand-1);
   }
   20%,
   21%,
@@ -69,8 +61,8 @@ body {
   64.9%,
   66% {
     opacity: 0.6;
-    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px var(--color-brand-1),
-      0 0 15px var(--color-brand-1);
+    text-shadow: 0 0 2px var(--color-brand-1), 0 0 5px var(--color-brand-1),
+      0 0 10px var(--color-brand-1), 0 0 15px var(--color-brand-1);
   }
 }
 
@@ -105,7 +97,27 @@ body {
     scale: 1;
   }
 }
-
+@keyframes rotateFrom {
+  0% {
+    transform: translateX(40px);
+    rotate: 360deg;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 button {
   cursor: pointer;
+}
+
+body {
+  background-image: url("/without-bg.avif");
+  background-color: white;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+li {
+  width: 100%;
 }
