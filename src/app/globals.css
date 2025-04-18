@@ -4,40 +4,12 @@
   --color-brand-1: oklch(47.29% 0.175 25.84);
 
   --font-brand-1: "Noto Sans";
-  --font-brand-2: "Noto Sans";
 
   --animate-neon: neon 3s ease;
   --animate-neon-infinite: neon 3s ease infinite;
   --animate-slide_in: slideIn 1s ease;
   --animate-from-center: fromCenter 1s ease;
-}
-
-/* NEON */
-@font-face {
-  font-family: "Neon";
-  src: url("/fonts/Neon.woff2") format("woff2");
-  font-weight: 400;
-}
-
-/* NEON 2 */
-@font-face {
-  font-family: "Neon-2";
-  src: url("/fonts/neon-2.woff2") format("woff2");
-  font-weight: 400;
-}
-
-/* CLARENDON */
-@font-face {
-  font-family: "Clarendon" format("woff2");
-  src: url("/fonts/CLARENDON.woff2");
-  font-weight: 500;
-}
-
-/* BERLIN */
-@font-face {
-  font-family: "Berlin";
-  src: url("/fonts/berlinsignature.woff2") format("woff2");
-  font-weight: 400;
+  --animate-rotate: rotateFrom 1s ease;
 }
 
 /* NOTO SANS */
