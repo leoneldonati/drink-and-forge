@@ -14,7 +14,7 @@ export default function CartFeed() {
       {list.map((product) => (
         <article
           key={product._id}
-          className="max-w-[220px] m-h-100 h-full w-full font-brand-2 p-3 rounded-md outline-2 outline-brand-1 shadow-xl shadow-brand-1/40 flex flex-col items-center justify-between backdrop-blur-md bg-black/40 relative"
+          className="max-w-[220px] m-h-100 h-full w-full font-brand-1 uppercase gap-2 p-3 rounded-md outline-2 outline-brand-1 shadow-xl shadow-brand-1/40 flex flex-col items-center justify-between backdrop-blur-md bg-black/40 relative"
         >
           <button
             title={`Borrar ${product.name}`}
@@ -36,7 +36,7 @@ export default function CartFeed() {
           />
           <p>{product.name}</p>
 
-          <p className="text-xl">${product.price}</p>
+          <p className="text-xl font-bold">${product.price}</p>
 
           <FlavorSelector flavors={product.flavors} prodId={product._id} />
           <AddCartButton product={product} />

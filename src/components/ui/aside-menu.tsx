@@ -35,7 +35,7 @@ export default function AsideMenu() {
         <li>
           <Link
             href="/"
-            className="px-4 py-2 rounded-md font-brand-2  animate-neon md:w-fit w-full  grid place-items-center bg-brand-1 text-white font-bold"
+            className="px-4 py-2 rounded-md font-brand-1 uppercase  animate-neon md:w-fit w-full  grid place-items-center bg-brand-1 text-white font-bold"
             style={{ textShadow: "-1px 1.5px 5px var(--color-brand-1)" }}
           >
             Inicio
@@ -44,7 +44,7 @@ export default function AsideMenu() {
         <li>
           <Link
             href="/products"
-            className="px-4 py-2 rounded-md font-brand-2  animate-neon md:w-fit w-full  grid place-items-center bg-brand-1 text-white font-bold"
+            className="px-4 py-2 rounded-md font-brand-1 uppercase  animate-neon md:w-fit w-full  grid place-items-center bg-brand-1 text-white font-bold"
             style={{ textShadow: "-1px 1.5px 5px var(--color-brand-1)" }}
           >
             Productos
@@ -53,7 +53,7 @@ export default function AsideMenu() {
         <li>
           <Link
             href="/combos"
-            className="px-4 py-2 rounded-md font-brand-2  animate-neon md:w-fit w-full  grid place-items-center bg-brand-1 text-white font-bold"
+            className="px-4 py-2 rounded-md font-brand-1 uppercase  animate-neon md:w-fit w-full  grid place-items-center bg-brand-1 text-white font-bold"
             style={{ textShadow: "-1px 1.5px 5px var(--color-brand-1)" }}
           >
             Combos

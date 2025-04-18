@@ -13,9 +13,9 @@ export default function SendOrderButton() {
       rel="noreferrer noopener"
       aria-label="Enviar el pedido a WhatsApp"
       title="Enviar el pedido a WhatsApp"
-      className="flex items-center justify-center gap-1 px-4 py-2 rounded-md bg-white text-brand-1 "
+      className="flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-white text-brand-1 [&:hover>svg]:rotate-45"
     >
-      <IconSend /> Enviar pedido
+      <IconSend className="transition-transform" /> Enviar pedido
     </a>
   );
 }

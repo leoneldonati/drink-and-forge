@@ -3,8 +3,8 @@
 @theme {
   --color-brand-1: oklch(47.29% 0.175 25.84);
 
-  --font-brand-1: "Clarendon";
-  --font-brand-2: "Neon";
+  --font-brand-1: "Noto Sans";
+  --font-brand-2: "Noto Sans";
 
   --animate-neon: neon 3s ease;
   --animate-neon-infinite: neon 3s ease infinite;
@@ -37,6 +37,13 @@
 @font-face {
   font-family: "Berlin";
   src: url("/fonts/berlinsignature.woff2") format("woff2");
+  font-weight: 400;
+}
+
+/* NOTO SANS */
+@font-face {
+  font-family: "Noto Sans";
+  src: url("/fonts/noto-sans.woff2") format("woff2");
   font-weight: 400;
 }
 
