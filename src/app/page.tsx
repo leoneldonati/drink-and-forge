@@ -1,24 +1,13 @@
-import Image from "next/image";
-import Logo from "@assets/mobile-logo.png";
-import Logo2 from "@assets/desktop-logo.svg";
+import Logo from "@components/logo";
+import LogoDesktop from "@components/logo-desktop";
 import Link from "next/link";
 export default function Home() {
   return (
     <section className="flex flex-col flex-grow justify-center items-center gap-5">
-      <div className="flex flex-col md:flex-row items-center animate-from-center  rounded-md backdrop-blur-[20px]  p-2">
-        <Image
-          src={Logo}
-          alt="Logotipo oficial Drink and Forget."
-          style={{ filter: "drop-shadow(0 10px 20px #fff)" }}
-          className="animate-neon-infinite max-w-[260px] md:hidden"
-        />
+      <div className="md:max-w-[750px] w-full max-w-[300px]">
+        <Logo />
 
-        <Image
-          src={Logo2}
-          alt="Logotipo oficial Drink and Forget."
-          style={{ filter: "drop-shadow(0 10px 20px #fff)" }}
-          className="animate-neon-infinite w-[900px]  md:block hidden text-brand-1"
-        />
+        <LogoDesktop />
       </div>
 
       <div className="flex items-center gap-4 animate-slide_in">

@@ -12,11 +12,17 @@ export default function ProductCard({ product }: Props) {
         alt="Fondo blanco"
         width={500}
         height={400}
-        className="max-w-40 w-full aspect-square object-contain"
+        className="max-w-50 w-full aspect-square object-contain"
       />
       <p className="h-full uppercase">{product.name}</p>
 
-      <p className="text-xl font-bold">${product.price}</p>
+      <p className="text-xl font-bold">
+        $
+        {product.price.toLocaleString("ES-AR", {
+          currency: "ARS",
+          currencySign: "standard",
+        })}
+      </p>
 
       <div className="w-full flex flex-col gap-2">
         <AddCartButton product={product} />

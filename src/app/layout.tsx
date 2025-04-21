@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
         <div className="max-w-4xl mx-auto min-h-screen flex flex-col w-full">
           <Header />
@@ -43,7 +43,7 @@ export default function RootLayout({
         <Image
           src={withoutBg}
           alt=""
-          className="absolute w-full h-full top-0 left-0 -z-20 object-cover aspect-video"
+          className="fixed top-0 left-0 -z-10 w-full h-full brightness-55 object-cover aspect-video scale-110"
         />
         <Toaster
           position="top-center"
