@@ -36,7 +36,9 @@ export default function CartFeed() {
           />
           <p>{product.name}</p>
 
-          <p className="text-xl font-bold">${product.price}</p>
+          <p className="text-xl font-bold">
+            ${product.price.toLocaleString("es-ar", { currency: "ARS" })}
+          </p>
 
           <FlavorSelector flavors={product.flavors} prodId={product._id} />
           <AddCartButton product={product} />
