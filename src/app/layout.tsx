@@ -1,25 +1,49 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@components/header";
 import { Toaster } from "react-hot-toast";
 import Footer from "@components/footer";
 import Image from "next/image";
 import withoutBg from "@assets/bg-white.png";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+const CANNONICAL_URL = "https://dafbebidas.netlify.app";
 export const metadata: Metadata = {
   title: "Drink and Forget",
   description:
     "Drink and Forget: para quienes saben que la vida sigue y cada trago es un nuevo comienzo. Siempre hay una razón para brindar, aunque sea por olvidar. ¡Salud!",
+  metadataBase: new URL(CANNONICAL_URL),
+  alternates: {
+    canonical: CANNONICAL_URL,
+  },
+  authors: [{ name: "Leonel Donati", url: "https://leodonati.site" }],
+  openGraph: {
+    title: "Drink and Forget",
+    description:
+      "Para quienes saben que la vida sigue y cada trago es un nuevo comienzo. Siempre hay una razón para brindar, aunque sea por olvidar. ¡Salud!",
+    url: CANNONICAL_URL,
+    siteName: "DAF Bebidas",
+    images: [
+      {
+        url: `${CANNONICAL_URL}/daf.avif`,
+        alt: "Brindis con copas de whiskey",
+        type: "image/avif",
+      },
+    ],
+    locale: "es_AR",
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -29,9 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
-      >
+      <body className={` antialiased relative`}>
         <div className="max-w-4xl mx-auto min-h-screen flex flex-col w-full">
           <Header />
           <main className="max-w-2xl mx-auto px-2 flex-grow flex flex-col w-full">
