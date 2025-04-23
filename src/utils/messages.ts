@@ -1,10 +1,14 @@
 const createMessage = (products: ProductInCart[], finalPrice: string) => {
-  const productNames = products.map((prod) => prod.name).join("\n");
-
+  const orders = products
+    .map(({ selectedFlavors, quantity, name }) => {
+      const flavors = selectedFlavors.join(", ");
+      return `*${quantity}* - ${name} - _${flavors}_`;
+    })
+    .join("\n");
   const message = `
     Hola D&F! 🍷. \n
-    *Quiero pedir:*
-    _${productNames}_ \n
+    Quiero pedir:
+    ${orders} \n
     *PRECIO FINAL: $${finalPrice}*
     ¡Muchas gracias!
   `;
