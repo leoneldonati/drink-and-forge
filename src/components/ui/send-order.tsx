@@ -11,7 +11,7 @@ export default function SendOrderButton() {
   const isEmptyCart = getLength() === 0;
   return (
     <a
-      href={`https://api.whatsapp.com/send?phone=5493417502479&text=${encodedMessage}`}
+      href={`https://api.whatsapp.com/send?phone=5493412859537&text=${encodedMessage}`}
       rel="noreferrer noopener"
       aria-label="Enviar el pedido a WhatsApp"
       title="Enviar el pedido a WhatsApp"
