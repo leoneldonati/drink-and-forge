@@ -10,12 +10,14 @@ interface CartStore {
   deleteOne: (_id: string) => void;
   quiteOne: (_id: string) => void;
   deleteAllCart: () => void;
+  getFinalPrice: () => string;
 }
 
 export const useCartStore = create(
   persist<CartStore>(
     (set, get) => ({
       list: [],
+
       getLength: () => {
         const { list } = get();
 
@@ -24,7 +26,7 @@ export const useCartStore = create(
       isInCart: (_id) => {
         const { list } = get();
 
-        return list.find((prod) => prod._id === _id) !== undefined;
+        return list.some((prod) => prod._id === _id);
       },
       isSelectedFlavor: (flavor, _id) => {
         const { list } = get();
@@ -101,6 +103,16 @@ export const useCartStore = create(
         set({ list: mappedList });
       },
       deleteAllCart: () => set({ list: [] }),
+      getFinalPrice: () => {
+        const { list } = get();
+
+        const finalNumber = list.reduce(
+          (acc, value) => acc + value.price * value.quantity,
+          0
+        );
+
+        return finalNumber.toLocaleString("es-ar", { currency: "ARS" });
+      },
     }),
     { name: "cart-list-DAF" }
   )

@@ -1,8 +1,4 @@
-const createMessage = (products: ProductInCart[]) => {
-  const finalPrice = products.reduce(
-    (acc, value) => acc + value.price * value.quantity,
-    0
-  );
+const createMessage = (products: ProductInCart[], finalPrice: string) => {
   const productNames = products.map((prod) => prod.name).join("\n");
 
   const message = `

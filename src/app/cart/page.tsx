@@ -1,4 +1,4 @@
-import SendOrderButton from "@components/send-order";
+import SendOrderButton from "@components/ui/send-order";
 import CartCounter from "@components/ui/cart-counter";
 import CartFeed from "@components/ui/cart-feed";
 import DeleteCartButton from "@components/ui/delete-cart-button";
