@@ -1,4 +1,3 @@
-import { PHONE_NUMBER } from "@constants";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
 
 export default function Footer() {
@@ -9,7 +8,7 @@ export default function Footer() {
       </p>
 
       <a
-        href={`https://api.whatsapp.com/send?phone=${PHONE_NUMBER}`}
+        href={`https://api.whatsapp.com/send?phone=5493412859537`}
         title="¡Contáctanos en Whatsapp!"
         aria-label="¡Contáctanos en Whatsapp!"
         className="text-white bg-green-500 p-2 flex rounded-full animate-rotate"
