@@ -5,9 +5,15 @@ import Link from "next/link";
 import waves from "@assets/waves.avif";
 import bottle from "@assets/bottle.avif";
 import bottleLeft from "@assets/bottle-left.avif";
+import Carousel from "@components/ui/carousel";
+import carousel_1 from "@assets/carousel/op1.png";
+import carousel_2 from "@assets/carousel/op2.png";
+import carousel_3 from "@assets/carousel/op3.png";
 export default function Home() {
+  const assets = [carousel_1, carousel_2, carousel_3];
   return (
     <section className="flex flex-col flex-grow justify-center items-center gap-5 overflow-hidden">
+      <Carousel assets={assets} />
       <div className="md:max-w-[750px] w-full max-w-[300px]">
         <Logo />
 
@@ -30,7 +36,7 @@ export default function Home() {
             className=" animate-shake animate-duration-[3500ms] w-full absolute h-full"
           />
 
-          <div className="px-4 py-2 bg-brand-1 animate-flip-up animate-duration-[3500ms] animate-ease flex">
+          <div className="px-4 py-2 bg-brand-1 animate-flip-up animate-duration-[3500ms] animate-ease flex text-yellow-300">
             VER COMBOS
           </div>
         </Link>
@@ -49,7 +55,7 @@ export default function Home() {
             alt=""
             className="animate-shake animate-duration-[3500ms] w-full absolute h-full"
           />
-          <div className="px-4 py-2 bg-brand-1 animate-flip-up animate-duration-[3500ms] animate-ease flex">
+          <div className="px-4 py-2 bg-brand-1 animate-flip-up animate-duration-[3500ms] animate-ease flex text-yellow-300">
             VER PRODUCTOS
           </div>
         </Link>

@@ -56,7 +56,7 @@ export default function RootLayout({
       <body className={` antialiased relative`}>
         <div className="max-w-4xl mx-auto min-h-screen flex flex-col w-full">
           <Header />
-          <main className="max-w-2xl mx-auto px-2 flex-grow flex flex-col w-full">
+          <main className="  px-2 flex-grow flex flex-col w-full">
             {children}
           </main>
           <Footer />
