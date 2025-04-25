@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@import "tailwindcss-animated";
 @theme {
   --color-brand-1: oklch(47.29% 0.175 25.84);
 
@@ -10,6 +10,8 @@
   --animate-slide_in: slideIn 1s ease;
   --animate-from-center: fromCenter 1s ease;
   --animate-rotate: rotateFrom 1s ease;
+  --animate-bottle: fillBottle 2.4s ease both;
+  --animate-bottle-right: fillBottleLeft 2s ease both;
 }
 
 /* NOTO SANS */
@@ -85,6 +87,40 @@
     transform: translateX(0);
   }
 }
+
+@keyframes fillBottle {
+  0% {
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+}
+@keyframes fillBottleLeft {
+  0% {
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+}
+
 button {
   cursor: pointer;
 }

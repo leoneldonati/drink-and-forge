@@ -1,6 +1,10 @@
 import Logo from "@components/logo";
 import LogoDesktop from "@components/logo-desktop";
+import Image from "next/image";
 import Link from "next/link";
+import waves from "@assets/waves.avif";
+import bottle from "@assets/bottle.avif";
+import bottleLeft from "@assets/bottle-left.avif";
 export default function Home() {
   return (
     <section className="flex flex-col flex-grow justify-center items-center gap-5">
@@ -10,18 +14,44 @@ export default function Home() {
         <LogoDesktop />
       </div>
 
-      <div className="flex items-center gap-4 animate-slide_in">
+      <div className="flex items-center justify-center gap-4 w-full max-w-sm relative">
+        <Image
+          src={bottle}
+          alt=""
+          className="absolute z-20 -top-20 -left-10 animate-bottle"
+        />
         <Link
           href="/combos"
-          className="px-4 py-2 rounded-md font-brand-2  animate-neon bg-pink-700 text-white font-bold"
+          className=" rounded-md font-brand-2 font-bold relative overflow-hidden"
         >
-          VER COMBOS
+          <Image
+            src={waves}
+            alt=""
+            className=" animate-shake animate-duration-[3500ms] w-full absolute h-full"
+          />
+
+          <div className="px-4 py-2 bg-brand-1 animate-flip-up animate-duration-[3500ms] animate-ease">
+            VER COMBOS
+          </div>
         </Link>
+
+        <Image
+          src={bottleLeft}
+          alt=""
+          className="absolute z-20 -top-20 -right-10 animate-bottle-right"
+        />
         <Link
           href="/products"
-          className="px-4 py-2 rounded-md font-brand-2  animate-neon bg-pink-700 text-white font-bold"
+          className=" rounded-md font-brand-2 font-bold relative overflow-hidden"
         >
-          VER PRODUCTOS
+          <Image
+            src={waves}
+            alt=""
+            className="animate-shake animate-duration-[3500ms] w-full absolute h-full"
+          />
+          <div className="px-4 py-2 bg-brand-1 animate-flip-up animate-duration-[3500ms] animate-ease">
+            VER PRODUCTOS
+          </div>
         </Link>
       </div>
     </section>
