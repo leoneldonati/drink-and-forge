@@ -18,7 +18,7 @@ export default function Home() {
         <Image
           src={bottle}
           alt=""
-          className="absolute z-20 -top-20 -left-10 animate-bottle"
+          className="absolute z-20 -top-20 -left-10 animate-bottle size-24"
         />
         <Link
           href="/combos"
@@ -38,7 +38,7 @@ export default function Home() {
         <Image
           src={bottleLeft}
           alt=""
-          className="absolute z-20 -top-20 -right-10 animate-bottle-right"
+          className="absolute z-20 -top-20 -right-10 animate-bottle-right size-24"
         />
         <Link
           href="/products"
