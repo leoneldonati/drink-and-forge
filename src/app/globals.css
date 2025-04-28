@@ -10,8 +10,10 @@
   --animate-slide_in: slideIn 1s ease;
   --animate-from-center: fromCenter 1s ease;
   --animate-rotate: rotateFrom 1s ease;
-  --animate-bottle: fillBottle 2.4s ease both;
-  --animate-bottle-right: fillBottleLeft 2s ease both;
+  --animate-bottle: fillBottle 3s ease both;
+  --animate-bottle-right: fillBottleLeft 3s ease both;
+
+  --animate-zoom: zoom 5s ease;
 }
 
 /* NOTO SANS */
@@ -120,7 +122,15 @@
     opacity: 0;
   }
 }
-
+/* ANIMATION ZOOM */
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
 button {
   cursor: pointer;
 }

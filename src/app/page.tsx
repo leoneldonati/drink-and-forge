@@ -2,7 +2,7 @@ import Logo from "@components/logo";
 import LogoDesktop from "@components/logo-desktop";
 import Image from "next/image";
 import Link from "next/link";
-import waves from "@assets/waves.avif";
+import waves from "@assets/waves.png";
 import bottle from "@assets/bottle.avif";
 import bottleLeft from "@assets/bottle-left.avif";
 import Carousel from "@components/ui/carousel";
@@ -24,7 +24,7 @@ export default function Home() {
         <Image
           src={bottle}
           alt=""
-          className="absolute z-20 -top-20 -left-10 animate-bottle size-24"
+          className="absolute z-20 -top-20 -left-10 animate-bottle size-24 "
         />
         <Link
           href="/combos"
@@ -33,10 +33,10 @@ export default function Home() {
           <Image
             src={waves}
             alt=""
-            className=" animate-shake animate-duration-[3500ms] w-full absolute h-full"
+            className="animate-wiggle animate-thrice w-[200px] absolute top-0 right-0 h-full flex object-cover object-center"
           />
 
-          <div className="px-4 py-2 bg-brand-1 animate-flip-up animate-duration-[3500ms] animate-ease flex text-yellow-300">
+          <div className="px-4 py-2 bg-brand-1 animate-flip-up animate-duration-[3000ms]  animate-ease-linear flex text-yellow-300">
             VER COMBOS
           </div>
         </Link>
@@ -53,9 +53,9 @@ export default function Home() {
           <Image
             src={waves}
             alt=""
-            className="animate-shake animate-duration-[3500ms] w-full absolute h-full"
+            className="animate-wiggle animate-thrice w-[200px] absolute h-full top-0 right-0 flex object-cover object-center"
           />
-          <div className="px-4 py-2 bg-brand-1 animate-flip-up animate-duration-[3500ms] animate-ease flex text-yellow-300">
+          <div className="px-4 py-2 bg-brand-1 animate-flip-up animate-duration-[3000ms] animate-ease-linear flex text-yellow-300">
             VER PRODUCTOS
           </div>
         </Link>
